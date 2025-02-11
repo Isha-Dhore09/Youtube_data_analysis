@@ -44,7 +44,7 @@ FROM youtube_data
 ORDER BY Video_Views DESC 
 LIMIT 10;
 
-## 2. Find the Average Number of Views Per Category
+### 2. Find the Average Number of Views Per Category
 
 SELECT Category,
 AVG(Video_Views) AS Avg_Views 
