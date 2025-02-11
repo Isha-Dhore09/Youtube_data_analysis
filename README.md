@@ -8,11 +8,11 @@ This YouTube Data Analysis SQL project focuses on analyzing video performance me
 The project aims to answer key business questions using SQL queries, helping to understand video performance, trends, and audience engagement.
 
 ## Technical SQL Skills Used
-✔ Data Cleaning: Removing commas in numerical fields, handling missing data
-✔ Aggregation Functions: COUNT, AVG, MAX, MIN, STDDEV
-✔ Grouping & Filtering: GROUP BY, ORDER BY
-✔ Ranking & Distribution Analysis: Finding even ranking spread using STDDEV(Rank)
-✔ Performance Metrics: Engagement rate analysis (Likes / Views)
+1.Data Cleaning: Removing commas in numerical fields, handling missing data
+2.Aggregation Functions: COUNT, AVG, MAX, MIN, STDDEV
+3.Grouping & Filtering: GROUP BY, ORDER BY
+4.Ranking & Distribution Analysis: Finding even ranking spread using STDDEV(Rank)
+5.Performance Metrics: Engagement rate analysis (Likes / Views)
 
 ## Final Business Takeaways
 1. Content creators can focus on winning categories and improve engagement.
@@ -20,7 +20,7 @@ The project aims to answer key business questions using SQL queries, helping to 
 3. YouTube’s algorithm managers can adjust recommendations based on trends.
 4. Businesses can analyze trends to predict the next big thing on YouTube.
 
-## Business questions & Solutions
+## Schema
 ```sql
 DROP TABLE IF EXISTS youtube_data;
 CREATE TABLE youtube_data
