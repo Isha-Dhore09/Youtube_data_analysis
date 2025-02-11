@@ -9,9 +9,13 @@ The project aims to answer key business questions using SQL queries, helping to 
 
 ## Technical SQL Skills Used
 1.Data Cleaning: Removing commas in numerical fields, handling missing data
+
 2.Aggregation Functions: COUNT, AVG, MAX, MIN, STDDEV
+
 3.Grouping & Filtering: GROUP BY, ORDER BY
+
 4.Ranking & Distribution Analysis: Finding even ranking spread using STDDEV(Rank)
+
 5.Performance Metrics: Engagement rate analysis (Likes / Views)
 
 ## Final Business Takeaways
