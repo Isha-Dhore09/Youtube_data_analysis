@@ -21,7 +21,7 @@ The project aims to answer key business questions using SQL queries, helping to 
 4. Businesses can analyze trends to predict the next big thing on YouTube.
 
 ## Business questions & Solutions
-
+```sql
 DROP TABLE IF EXISTS youtube_data;
 CREATE TABLE youtube_data
 (
@@ -36,7 +36,7 @@ CREATE TABLE youtube_data
 
 ## Business problems & Solutions
 ## 1. Find the Top 10 Most Viewed Videos
-
+```sql
 SELECT * FROM youtube_data;
 
 SELECT Rank, Video, Video_Views, Category 
@@ -45,7 +45,7 @@ ORDER BY Video_Views DESC
 LIMIT 10;
 
 ### 2. Find the Average Number of Views Per Category
-
+```sql
 SELECT Category,
 AVG(Video_Views) AS Avg_Views 
 FROM youtube_data
@@ -54,7 +54,7 @@ ORDER BY Avg_Views DESC;
 
 
 ## 3. Find the 5 Most Liked Videos
-
+```sql
 SELECT Rank, Video, likes, Category 
 FROM youtube_data
 ORDER BY likes DESC 
@@ -62,6 +62,8 @@ LIMIT 5;
 
 ## 4. Find the Engagement Rate for Each Video
 --(Engagement Rate = (Likes + Dislikes) / Views)
+```sql
+
 SELECT * FROM youtube_data;
 
 SELECT Rank, Video, 
@@ -72,6 +74,7 @@ LIMIT 10;
 
 
 ## 5. Find the Category with the Highest Average Likes
+```sql
 SELECT * FROM youtube_data;
 SELECT Category, AVG(Likes) AS Avg_Likes 
 FROM youtube_data
@@ -80,6 +83,7 @@ ORDER BY Avg_Likes DESC;
 
 
 ## 6. Which category has the most evenly distributed video rankings?
+```sql
 SELECT * FROM youtube_data;
 
 SELECT 
@@ -94,6 +98,7 @@ ORDER BY Rank_StdDev ASC;
 
 ## 7. Find the Dislike Ratio for Each Video
 --(Dislike Ratio = (Dislikes / Video Views) * 100)
+```sql
 SELECT * FROM youtube_data;
 
 SELECT Rank, Video, 
@@ -104,6 +109,7 @@ LIMIT 10;
 
 
 ## 8. Find the Most Popular Video Category (Based on Views)
+```sql
 SELECT * FROM youtube_data;
 
 SELECT Category, SUM(Video_Views) AS Total_Views 
@@ -113,6 +119,7 @@ ORDER BY Total_Views DESC
 LIMIT 1;
 
 ## 9. How do videos in the same category compare in terms of views, likes, and dislikes?
+```sql
 SELECT * FROM youtube_data;
 
 SELECT 
@@ -129,6 +136,7 @@ ORDER BY Avg_Views DESC;
 
 
 ## 10. Find the Percentage of Videos with a Dislike Ratio > 10%
+```sql
 SELECT * FROM youtube_data;
 
 SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM youtube_data) AS Percentage 
